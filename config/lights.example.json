@@ -1,0 +1,46 @@
+{
+  "port": 3000,
+  "requestTimeoutMs": 12000,
+  "cloud": {
+    "enabled": false,
+    "username": "mi_account_login@example.com",
+    "password": "mi_account_password",
+    "country": "cn",
+    "interactiveAuth": false,
+    "sessionFile": ".mi-cloud-session.json",
+    "captchaImagePath": "../xiaomi-captcha.jpg"
+  },
+  "devices": [
+    {
+      "name": "living_room_strip",
+      "transport": "lan",
+      "model": "yeelink.light.strip2",
+      "address": "192.168.1.20",
+      "token": "0123456789abcdef0123456789abcdef"
+    },
+    {
+      "name": "bedroom_ceiling",
+      "transport": "lan",
+      "model": "yeelink.light.ceiling1",
+      "address": "192.168.1.21",
+      "token": "0123456789abcdef0123456789abcdef"
+    },
+    {
+      "name": "office_bulb_cloud",
+      "transport": "cloud",
+      "model": "yeelink.light.color5",
+      "id": "1234567890123456789"
+    }
+  ],
+  "groups": {
+    "all": [
+      "living_room_strip",
+      "bedroom_ceiling",
+      "office_bulb_cloud"
+    ],
+    "living_room": [
+      "living_room_strip",
+      "bedroom_ceiling"
+    ]
+  }
+}
